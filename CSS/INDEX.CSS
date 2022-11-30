@@ -303,7 +303,7 @@ iframe{
         max-width: 100%;
         height: auto;
     }
- .programa{
+.programa{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -362,4 +362,3 @@ nav .mainmenu li{
     padding: 12px;
     }
 }
-
