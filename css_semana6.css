@@ -1,0 +1,391 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    max-height: 100%;
+}
+
+body {
+    font-family: Tahoma;
+    font-size: 18px;
+}
+
+#header {
+    background-color: rgb(195, 66, 66);
+    border: 2px solid rgb(71, 2, 2);
+    border-radius: 20px 20px 10px 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    grid-area: header;
+}
+
+ul {
+    padding: 0 0;
+    margin: 0 1px;
+}
+
+li {
+    display: inline;
+    list-style: none;
+    margin: 0 5px;
+    font: bold 12px Verdana;
+}
+
+a {
+    color: rgb(8, 8, 8);
+    text-decoration: none;
+}
+
+#menu {
+    grid-area: nav;
+    background-color: rgb(123, 92, 143);
+    border: 2px solid rgb(77, 0, 0);
+    border-radius: 22px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    margin: 5px;
+}
+
+.buscarbox input {
+    height: 25px;
+    width: 0px;
+    padding: 0px 0px;
+    border-radius: 40px;
+    border: 0px;
+    padding-right: 50px;
+    transition: 0.8s ease;
+}
+
+.buscarbox input:hover {
+    width: 150px;
+    padding-left: 10px;
+    outline: none;
+}
+
+#main {
+    grid-area: main;
+    background-color: rgb(146, 3, 3);
+    border: 2px solid rgb(255, 0, 0);
+    max-width: 100%;
+    height: auto;
+}
+
+figure,
+figcaption {
+    display: inline;
+    margin: 45px;
+    padding: 5px 5px;
+}
+
+.programa {
+    display: inline-block;
+    margin: 5px 5px;
+    padding: 5px 5px;
+    width: 45%;
+    height: 200px;
+    position: relative;
+    border: 1px solid rgb(255, 0, 0);
+    border-radius: 15px 15px;
+}
+
+section article {
+    background-color: rgb(219, 107, 107);
+    width: 200px;
+    margin: 20px;
+}
+
+#sidebar {
+    grid-area: sidebar;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+iframe {
+    max-width: 100%;
+    height: auto;
+}
+
+#footer {
+    grid-area: footer;
+    background-color: rgb(145, 10, 10);
+    border: 2px solid rgb(243, 9, 48);
+    border-radius: 20px 20px 10px 10px;
+    clear: both;
+}
+
+#grid-container>* {
+    text-align: center;
+    box-shadow: 1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+}
+
+#grid-container {
+
+    display: grid;
+
+    grid-gap: 10px;
+
+    grid-template:
+
+        "header header header" 150px
+        "nav nav nav" 50px
+        "main main sidebar" 300px
+        "main main sidebar" 300px
+        "main main sidebar" 250px
+        "footer footer footer" 150px /
+        1000px 150px 300px;
+
+}
+
+#redes a {
+    padding: 0;
+    margin: 0;
+}
+
+#redes a i:hover {
+    transform: scaleX(1.5);
+}
+
+.fa-home {
+    color: rgb(8, 8, 8);
+    font-size: 18px;
+}
+
+.fa-cart-arrow-down {
+    color: rgb(8, 8, 8);
+    font-size: 18px;
+}
+
+.fa-charging-station {
+    color: rgb(10, 10, 10);
+    font-size: 18px;
+}
+
+.fa-wpforms {
+    color: rgb(10, 10, 10);
+    font-size: 18px;
+}
+
+.fa-user {
+    color: rgb(8, 8, 8);
+    font-size: 18px;
+}
+
+.fa-search {
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+
+}
+
+/*iconos fontawesome BAR SOCIAL*/
+
+.fab {
+
+    color: rgb(5, 5, 5);
+
+    border: 1px solid transparent;
+
+    margin: 0px;
+
+}
+
+.fa-youtube-square {
+
+    font-size: 32px;
+
+    background-color: rgb(192, 50, 50);
+
+}
+
+.fa-facebook-square {
+
+    font-size: 32px;
+
+    background-color: rgb(4, 4, 190);
+
+}
+
+.fa-twitter-square {
+
+    font-size: 32px;
+
+    background-color: rgb(4, 140, 185);
+
+}
+
+.fa-whatsapp {
+
+    font-size: 32px;
+
+    background-color: rgb(10, 133, 10);
+
+}
+
+.fa-instagram {
+
+    font-size: 32px;
+
+    background-color: rgb(223, 118, 49);
+
+}
+
+.fa-bars {
+    font-size: 30px;
+    color: black;
+}
+
+.openmenu {
+    display: none;
+    cursor: pointer;
+    font-size: 2 rem;
+}
+
+@media (max-width:1024px) {
+    #grid-container {
+        grid-template:
+            "header header" 170px
+            "nav main" 800px "nav main" 700px "sidebar sidebar" 650px "footer footer" 100px / 250px 450px;
+        font-size: 75%;
+    }
+
+    #menu {
+        background-color: rgba(255, 0, 0, 0.695);
+        border-radius: 22px;
+        display: block;
+        padding: 45px;
+        margin: 40px;
+        height: auto;
+        text-align: center;
+    }
+
+    #main {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        max-width: 100%;
+    }
+
+    .programa {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        max-width: 100%;
+        height: auto;
+        border: 1px solid black;
+    }
+
+    iframe {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .buscarbox {
+        display: block;
+        padding: 5px;
+    }
+}
+
+@media (max-width:640px) {
+    #grid-container {
+        grid-template:
+            "header" 150px
+            "nav" 50px
+            "main" 1400px
+            "sidebar" 800px
+            "footer" 100px /
+            500px;
+        font-size: 60%;
+    }
+
+    #menu {
+        display: none;
+    }
+
+    .openmenu {
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 120px;
+        z-index: 99;
+        cursor: pointer;
+    }
+
+    #main {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .programa {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        max-width: 100%;
+        height: auto;
+        border: 1px solid black;
+    }
+
+    @media (max-width:640px) {
+        #grid-container {
+            grid-template:
+                "header" 150px
+                "nav" 50px
+                "main" 1400px
+                "sidebar" 800px
+                "footer" 100px /
+                500px;
+            font-size: 60%;
+        }
+
+        por medio de funciones en boton hamburguesa*/ #menu {
+            display: none;
+        }
+
+        .openmenu {
+            display: block;
+            position: absolute;
+            top: 10px;
+            right: 120px;
+            z-index: 99;
+            cursor: pointer;
+        }
+
+        #main {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            max-width: 100%;
+            height: auto;
+        }
+
+        .programa {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            max-width: 100%;
+            height: auto;
+            border: 1px solid black;
+        }
+    }
+}
